@@ -28,6 +28,6 @@ public class Converter {
         int euro = Converter.rubleToEuro(amount);
         System.out.printf("%d rubles are %d euro.%n", amount, euro);
         int usd = Converter.rubleToDollar(amount);
-        System.out.printf("%d rubles are %d usd.", amount, usd);
+        System.out.printf("%d rubles are %d usd.%n", amount, usd);
     }
 }
