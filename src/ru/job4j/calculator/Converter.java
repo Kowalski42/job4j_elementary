@@ -6,13 +6,11 @@ import java.util.SortedMap;
 
 public class Converter {
     public static int rubleToEuro(int value) {
-        int rsl = value / 70;
-        return rsl;
+        return value / 70;
     }
 
     public static int rubleToDollar(int value) {
-        int rsl = value / 60; /* формула перевода рублей в доллары. */
-        return rsl;
+        return value / 60;
     }
 
     public static void main(String[] args) {
@@ -28,7 +26,7 @@ public class Converter {
             return;
         }
         int euro = Converter.rubleToEuro(amount);
-        System.out.printf("%d rubles are %d euro.\n", amount, euro);
+        System.out.printf("%d rubles are %d euro.%n", amount, euro);
         int usd = Converter.rubleToDollar(amount);
         System.out.printf("%d rubles are %d usd.", amount, usd);
     }
