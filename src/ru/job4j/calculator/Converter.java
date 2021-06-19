@@ -1,16 +1,55 @@
 package ru.job4j.calculator;
 
+import org.junit.Test;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.SortedMap;
 
 public class Converter {
+    public static final int USD_EXCHANGE_RATE = 60;
+    public static final int EURO_EXCHANGE_RATE = 70;
+
     public static int rubleToEuro(int value) {
-        return value / 70;
+        return value / EURO_EXCHANGE_RATE;
     }
 
     public static int rubleToDollar(int value) {
-        return value / 60;
+        return value / USD_EXCHANGE_RATE;
+    }
+
+    @Test
+    public static void testUsdExchange(int in) {
+        int expected = in / USD_EXCHANGE_RATE;
+        int out = Converter.rubleToDollar(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d usd. Test result : %b%n", in, out, passed);
+    }
+
+    @Test
+    public static void testUsdExchange() {
+        int in = 120;
+        int expected = in / USD_EXCHANGE_RATE;
+        int out = Converter.rubleToDollar(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d usd. Test result : %b%n", in, out, passed);
+    }
+
+    @Test
+    public static void testEuroExchange(int in) {
+        int expected = in / EURO_EXCHANGE_RATE;
+        int out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d euro. Test result : %b%n", in, out, passed);
+    }
+
+    @Test
+    public static void testEuroExchange() {
+        int in = 140;
+        int expected = in / EURO_EXCHANGE_RATE;
+        int out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d euro. Test result : %b%n", in, out, passed);
     }
 
     public static void main(String[] args) {
@@ -29,5 +68,9 @@ public class Converter {
         System.out.printf("%d rubles are %d euro.%n", amount, euro);
         int usd = Converter.rubleToDollar(amount);
         System.out.printf("%d rubles are %d usd.%n", amount, usd);
+        testEuroExchange(amount);
+        testEuroExchange();
+        testUsdExchange(amount);
+        testUsdExchange();
     }
 }
