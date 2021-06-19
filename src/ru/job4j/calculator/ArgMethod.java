@@ -18,7 +18,7 @@ public class ArgMethod {
     }
 
     public static void hello(String name1, String name2, String name3) {
-        System.out.printf("Hello, %s, %s and %s\n", name1, name2, name3);
+        System.out.printf("Hello, %s, %s and %s" + System.lineSeparator(), name1, name2, name3);
     }
 
     public static void main(String[] args) {
