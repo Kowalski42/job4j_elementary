@@ -3,9 +3,8 @@ package ru.job4j.condition;
 public class SqArea {
     public static double square(int p, double k) {
         double h = p / (2 * (k + 1)); // расчет высоты прямоугольника, зная p - периметр и k - соотношение длины к высоте
-        double L = h * k; // расчет длины прямоугольника
-        double s = L * h;
-        return s;
+        double l = h * k; // расчет длины прямоугольника
+        return l * h;
     }
 
     public static void main(String[] args) {
