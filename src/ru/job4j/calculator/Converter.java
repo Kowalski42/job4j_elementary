@@ -18,6 +18,36 @@ public class Converter {
         return value / USD_EXCHANGE_RATE;
     }
 
+    public static void testUsdExchange(int in) {
+        int expected = in / USD_EXCHANGE_RATE;
+        int out = Converter.rubleToDollar(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d usd. Test result : %b%n", in, out, passed);
+    }
+
+    public static void testUsdExchange() {
+        int in = 120;
+        int expected = in / USD_EXCHANGE_RATE;
+        int out = Converter.rubleToDollar(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d usd. Test result : %b%n", in, out, passed);
+    }
+
+    public static void testEuroExchange(int in) {
+        int expected = in / EURO_EXCHANGE_RATE;
+        int out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d euro. Test result : %b%n", in, out, passed);
+    }
+
+    public static void testEuroExchange() {
+        int in = 140;
+        int expected = in / EURO_EXCHANGE_RATE;
+        int out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.printf("%d rubles are %d euro. Test result : %b%n", in, out, passed);
+    }
+
     public static void main(String[] args) {
         int amount = 0;
         try (Scanner scanner = new Scanner(System.in);) {
@@ -32,7 +62,13 @@ public class Converter {
         }
         int euro = Converter.rubleToEuro(amount);
         System.out.printf("%d rubles are %d euro.%n", amount, euro);
+        //как временная замена Unit-тестам
+        testEuroExchange(amount);
+        testEuroExchange();
         int usd = Converter.rubleToDollar(amount);
         System.out.printf("%d rubles are %d usd.%n", amount, usd);
+        //как временная замена Unit-тестам
+        testUsdExchange(amount);
+        testUsdExchange();
     }
 }
