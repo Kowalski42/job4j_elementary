@@ -4,16 +4,8 @@ public class Slash {
     public static void draw(int size) {
         for (int row = 0; row < size; row++) {
             for (int cell = 0; cell < size; cell++) {
-                boolean left = false;
-                // условие, по которому нужно определить ставить ли символ или нет в левой диагональной линии
-                if (row == cell) {
-                    left = true;
-                }
-                boolean right = false;
-                // условие, по которому нужно определить ставить ли символ или нет в правой диагональной линии
-                if (row == size - cell - 1) {
-                    right = true;
-                }
+                boolean left = row == cell;
+                boolean right = (row == size - cell - 1);
                 if (left) {
                     System.out.print("0");
                 } else if (right) {
