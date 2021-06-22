@@ -10,6 +10,5 @@ public class ArrayDefinition {
         System.out.println("Размер массива " + ages.getClass().getSimpleName() + " ages - " + ages.length);
         System.out.println("Размер массива " + surnames.getClass().getSimpleName() + " surnames - " + surnames.length);
         System.out.println("Размер массива " + prices.getClass().getSimpleName() + " prices - " + prices.length);
-        System.out.println();
     }
 }
