@@ -10,5 +10,14 @@ public class ArrayDefinition {
         System.out.println("Размер массива " + ages.getClass().getSimpleName() + " ages - " + ages.length);
         System.out.println("Размер массива " + surnames.getClass().getSimpleName() + " surnames - " + surnames.length);
         System.out.println("Размер массива " + prices.getClass().getSimpleName() + " prices - " + prices.length);
+
+        String[] names = new String[4];
+        for (int i = 0; i < names.length; i++) {
+            names[i] = "Человек №" + (i + 1);
+        }
+        for (String e: names) {
+            System.out.println(e);
+        }
+        System.out.println("Размер массива " + names.getClass().getSimpleName() + " names - " + names.length);
     }
 }
