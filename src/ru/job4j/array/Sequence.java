@@ -5,17 +5,17 @@ import java.util.Arrays;
 public class Sequence {
     public static void main(String[] args) {
         int[][] array = new int[3][3];
-        int count = 1;
-        array[0][0] = count;
-        array[0][1] = ++count;
-        array[0][2] = ++count;
-        array[1][0] = ++count;
-        array[1][1] = ++count;
-        array[1][2] = ++count;
-        array[2][0] = ++count;
-        array[2][1] = ++count;
-        array[2][2] = ++count;
-        /*for (int a = 0; a < array.length; a++) {
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 4;
+        array[1][1] = 5;
+        array[1][2] = 6;
+        array[2][0] = 7;
+        array[2][1] = 8;
+        array[2][2] = 9;
+        /*int count = 1;
+        for (int a = 0; a < array.length; a++) {
             for (int b = 0; b < array[a].length; b++) {
                 array[a][b] = count;
                 count++;
