@@ -19,7 +19,6 @@ public class EndsWith {
             }
         }
         return false;*/
-
         //1й вариант
         /*boolean result = true;
         for (int index = 0; index < post.length; index++) {
