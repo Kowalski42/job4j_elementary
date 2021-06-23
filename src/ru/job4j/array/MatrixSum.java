@@ -8,12 +8,6 @@ public class MatrixSum {
                 rsl += array[row][cell];
             }
         }
-        // 2й способ
-        /*for (int[] ints : array) {
-            for (int anInt : ints) {
-                rsl += anInt;
-            }
-        }*/
         return rsl;
     }
 }
