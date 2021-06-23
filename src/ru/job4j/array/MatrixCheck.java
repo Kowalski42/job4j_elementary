@@ -35,7 +35,7 @@ public class MatrixCheck {
         boolean result = false;
         char[] temp = extractDiagonal(board);
         for (int i = 0; i < temp.length; i++) {
-            if (temp[i] == 'X' && monoVertical(board, i) || temp[i] == 'X' && monoHorizontal(board, i)) {
+            if (temp[i] == 'X' && (monoVertical(board, i) || monoHorizontal(board, i))) {
                 result = true;
                 break;
             }
