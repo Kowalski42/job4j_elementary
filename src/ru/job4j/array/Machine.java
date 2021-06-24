@@ -10,13 +10,12 @@ public class Machine {
         int i = 0; // для движения в массиве монет int[] coins
         int rest = money - price;
         while (rest != 0) {
-            if (rest >= coins[i]) {
+            if (rest < coins[i]) {
+                i++;
+            } else {
                 rsl[size] = coins[i];
                 rest -= coins[i];
                 size++;
-            }
-            if (rest < coins[i]) {
-                i++;
             }
         }
         return Arrays.copyOf(rsl, size);
