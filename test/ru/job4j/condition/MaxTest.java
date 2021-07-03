@@ -72,4 +72,15 @@ public class MaxTest {
         int expected = 95;
         Assert.assertEquals(result, expected);
     }
+
+    @Test
+    public void whenMax13To13to13to130Then130() {
+        int first = 13;
+        int second = 13;
+        int third = 13;
+        int forth = 130;
+        int result = Max.max(first, second, third, forth);
+        int expected = 130;
+        Assert.assertEquals(result, expected);
+    }
 }
